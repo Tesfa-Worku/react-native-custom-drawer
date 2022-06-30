@@ -1,7 +1,7 @@
 import React from 'react';
-import { View, Text, ImageBackground, Image } from "react-native";
+import { View, Text, ImageBackground, Image, TouchableOpacity } from "react-native";
 import { DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawer';
-import Icon from 'react-native-vector-icons/Ionicons';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
 const CustomDrawer = props => {
@@ -27,7 +27,6 @@ const CustomDrawer = props => {
                         style={{
                             color: '#FFF', 
                             fontSize: 18, 
-                            fontFamily: 'Roboto-Medium', 
                             marginBottom: 10
                         }}
                     >
@@ -36,9 +35,8 @@ const CustomDrawer = props => {
                     <View style={{flexDirection: 'row'}}>
                         <Text 
                             style={{
-                                color: '#FFF', 
-                                fontFamily: 'Roboto-Regular', 
-                                marginBottom: 10
+                                color: '#FFF',
+                                marginRight: 10
                             }}
                         >
                             280 Coins
@@ -54,11 +52,55 @@ const CustomDrawer = props => {
                     <DrawerItemList {...props}/>
                 </View>
             </DrawerContentScrollView>
-            <View>
-                <Text>Our Custom Text</Text>
+            <View 
+                style={{
+                    padding: 20, 
+                    borderTopWidth: 1, 
+                    borderTopColor: '#ccc'
+                }}
+            >
+                <TouchableOpacity 
+                    onPress={() => {}}
+                    style={{paddingVertical: 15}}
+                >
+                    <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                        <Ionicons
+                            name="share-social-outline"
+                            size={22}
+                        />
+                        <Text
+                            style={{
+                                fontSize: 15,
+                                marginLeft: 5 
+                            }}
+                        >
+                            Tell a Friend
+                        </Text>
+                    </View>
+                </TouchableOpacity>
+                <TouchableOpacity 
+                    onPress={() => {}}
+                    style={{paddingVertical: 15}}
+                >
+                    <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                        <Ionicons
+                            name="exit-outline"
+                            size={22}
+                        />
+                        <Text
+                            style={{
+                                fontSize: 15,
+                                marginLeft: 5 
+                            }}
+                        >
+                            Sign Out
+                        </Text>
+                    </View>
+                </TouchableOpacity>
+                
             </View>    
         </View>
-    )
+    );
 };
 
 export default CustomDrawer;
