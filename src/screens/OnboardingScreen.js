@@ -1,4 +1,3 @@
-import { NavigationContainer } from "@react-navigation/native";
 import { View, Text, SafeAreaView, TouchableOpacity} from "react-native";
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 
@@ -31,7 +30,6 @@ const OnboardingScreen = ({navigation}) => {
                             fontSize: 18,
                             textAlign: 'center',
                             fontWeight: 'bold',
-                            // fontFamily: 'Roboto-MediumItalic',
                         }}>
                         Let's Begin
                     </Text>
